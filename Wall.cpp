@@ -17,6 +17,8 @@ void Wall::update()
 {
 	m_currentFrame = 0;
 
+//	if (checkCollision(wall, EnergyBall::GetRect()))
+
 	SDLGameObject::update();
 }
 
@@ -24,7 +26,7 @@ void Wall::clean()
 {
 }
 
-bool checkCollision(SDL_Rect A, SDL_Rect B) 
+bool Wall::checkCollision(SDL_Rect A, SDL_Rect B) 
 {
 	int leftA, leftB;
 	int rightA, rightB;
@@ -63,4 +65,14 @@ bool checkCollision(SDL_Rect A, SDL_Rect B)
 
 	//If none of the sides from A are outside B
 	return true;
+}
+
+SDL_Rect Wall::setRect(SDL_Rect rect)
+{
+	rect.x = 500;
+	rect.y = 100;
+	rect.w = 64;
+	rect.h = 64;
+
+	return rect;
 }

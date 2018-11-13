@@ -16,5 +16,7 @@ private:
 	void handleInput();
 
 	SDL_Rect ball;
+
+	SDL_Rect setRect(SDL_Rect rect);
 };
 

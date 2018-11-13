@@ -16,5 +16,7 @@ private:
 
 	SDL_Rect wall;
 
+	SDL_Rect setRect(SDL_Rect rect);
+
 };
 

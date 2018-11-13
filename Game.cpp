@@ -24,7 +24,7 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 		{
 			return false;
 		}
-		if (!TheTextureManager::Instance()->load("Assets/wall.png", "wall", m_pRenderer))
+		if (!TheTextureManager::Instance()->load("assets/wall.png", "wall", m_pRenderer))
 		{
 			return false;
 		}
