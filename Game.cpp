@@ -24,15 +24,14 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 		{
 			return false;
 		}
-
-		if (true)
+		if (!TheTextureManager::Instance()->load("Assets/wall.png", "wall", m_pRenderer))
 		{
-			m_gameObjects.push_back(new Player(new LoaderParams(100, 100, 128, 82, "animate")));
-			m_gameObjects.push_back(new Enemy(new LoaderParams(300, 300, 128, 82, "animate")));
+			return false;
 		}
-		else if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_SPACE)) {
-			m_gameObjects.push_back(new EnergyBall(new LoaderParams()))
-		}
+
+		m_gameObjects.push_back(new Player(new LoaderParams(100, 100, 128, 82, "animate")));
+		m_gameObjects.push_back(new Enemy(new LoaderParams(300, 300, 128, 82, "animate")));
+		m_gameObjects.push_back(new Wall(new LoaderParams(500, 100, 64, 64, "wall")));
 
 		SDL_SetRenderDrawColor(m_pRenderer, 255, 0, 0, 255);
 	}

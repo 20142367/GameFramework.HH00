@@ -1,7 +1,7 @@
 #pragma once
 #include "SDLGameObject.h"
 
-class EnergyBall : SDLGameObject
+class EnergyBall : public SDLGameObject
 {
 public:
 	EnergyBall(const LoaderParams* pParams);
@@ -10,7 +10,11 @@ public:
 	virtual void update();
 	virtual void clean();
 
+	SDL_Rect GetRect() { return ball; }
+
 private:
 	void handleInput();
+
+	SDL_Rect ball;
 };
 

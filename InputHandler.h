@@ -10,7 +10,7 @@ public:
 	// keyboard spcific
 	const Uint8* m_keystates;
 
-	vector<GameObject*> m_gameObjects;
+	std::vector<GameObject*> m_gameObjects;
 
 	// mouse spcific
 	enum mouse_button {

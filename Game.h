@@ -4,6 +4,8 @@
 #include <SDL_image.h>
 #include "Player.h"
 #include "Enemy.h"
+#include "EnergyBall.h"
+#include "Wall.h"
 #include <vector>
 
 using namespace std;

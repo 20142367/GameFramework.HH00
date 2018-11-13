@@ -13,4 +13,9 @@ public :
 private :
 	void handleInput();
 
+	Uint32 startTime = 0;
+	Uint32 currentTime = 0;
+
+	const float coolTime = 500.0f;
+
 };

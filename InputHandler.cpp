@@ -45,9 +45,6 @@ void InputHandler::update()
 	case SDL_KEYUP:
 		onKeyUp();
 		break;
-	case SDLK_a:
-		onAKeyDown();
-		break;
 	default:
 		break;
 	}
